@@ -1,0 +1,389 @@
+/**
+ * -----------------------------------
+ *  PAGE HEADER
+ * -----------------------------------
+*/
+.page__header {
+  background: url(../assets/construction-2.jpeg) center center / cover;
+}
+
+/**
+ * -----------------------------------
+ *  WHOWEARE
+ * -----------------------------------
+*/
+#whoWeAre {
+  background: white;
+  min-width: 101vw;
+  position: relative;
+}
+
+#whoWeAre h2 {
+  margin-bottom: 2.4rem;
+}
+
+#whoWeAre p {
+  margin-bottom: 3.2rem;
+}
+
+.whoWeAre__content {
+  display: flex;
+  gap: 2rem;
+}
+
+.whoWeAre__image,
+.my-custom-swiper {
+  width: 50%;
+  border-radius: 0.8rem;
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.my-custom-swiper {
+  overflow: hidden;
+}
+
+.whoWeAre__image {
+  overflow: hidden;
+  position: relative;
+}
+
+.whoWeAre__image span {
+  background: var(--color-secondary);
+  border-radius: 0.4rem;
+  color: var(--color-white);
+  position: absolute;
+  right: 8rem;
+  bottom: 4rem;
+  padding: 2rem;
+  /* opacity: 0.75; */
+}
+
+.text-big {
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-1);
+}
+
+.whoWeAre__image small {
+  font-size: var(--font-size-3);
+}
+
+.my-custom-swiper {
+  padding: 4rem;
+  position: relative;
+}
+
+.mission {
+  background: var(--color-secondary);
+  border-radius: 0.8rem;
+  color: var(--color-white);
+  padding: 4rem;
+}
+
+/**
+ * -----------------------------------
+ *  BRING PLANS TO LIFE
+ * -----------------------------------
+*/
+#plansLife h2 {
+  margin-bottom: 2.4rem;
+}
+
+.plansLife__content video {
+  border-radius: 0.8rem;
+  width: 70%;
+  display: grid;
+  place-items: center;
+}
+
+.plansLife__content {
+  display: flex;
+  gap: 2rem;
+}
+
+.company__figures {
+  background: var(--color-secondary);
+  border-radius: 0.8rem;
+  color: var(--color-white);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 30%;
+}
+
+.company__stat {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.2rem;
+  /* position: relative; */
+}
+
+/* .company__stat:not(:last-child)::after {
+  content: "";
+  height: 8rem;
+  width: 0.2rem;
+  background: var(--color-white);
+  position: absolute;
+  top: 0;
+  right: -4rem;
+} */
+
+.company__stat--numbers {
+  font-size: var(--font-size-2);
+}
+
+/**
+ * -----------------------------------
+ *  OUR STORY
+ * -----------------------------------
+*/
+#ourStory h2 {
+  margin-bottom: 2.4rem;
+}
+
+.ourStory__content {
+  position: relative;
+}
+
+.story {
+  position: relative;
+  width: 50%;
+  padding: 2rem 4rem;
+  opacity: 0;
+  animation: animateStory 1s linear forwards;
+}
+
+.story-left {
+  left: 0;
+}
+
+.story-right {
+  left: 50%;
+}
+
+@keyframes animateStory {
+  0% {
+    opacity: 1;
+    transform: translateY(-2.4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.story:nth-child(2) {
+  animation-delay: 0s;
+}
+
+.story:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.story:nth-child(4) {
+  animation-delay: 2s;
+}
+
+.story:nth-child(5) {
+  animation-delay: 3s;
+}
+
+.story:nth-child(6) {
+  animation-delay: 4s;
+}
+
+.story i {
+  background: var(--color-white);
+  position: absolute;
+  top: 3rem;
+  right: -2.4rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: var(--font-size-3);
+  z-index: 10;
+}
+
+.story-right i {
+  left: -2.4rem;
+}
+
+.story .uil {
+  border: 0.4rem solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.vertical-line {
+  background: var(--color-secondary);
+  border-radius: 0.4rem;
+  width: 0.8rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: animateLine 6s linear forwards;
+}
+
+@keyframes animateLine {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+.story__info {
+  background: var(--color-white);
+  position: relative;
+  padding: 4rem;
+  border-radius: 0.8rem;
+}
+
+.story__info p {
+  margin: 1.6rem 0 2.4rem;
+}
+
+.story__info::after {
+  content: "";
+  position: absolute;
+  top: 2.4rem;
+  right: -1.2rem;
+  width: 0;
+  height: 0;
+  border-top: 1.2rem solid transparent;
+  border-bottom: 1.2rem solid transparent;
+  border-left: 1.2rem solid var(--color-white);
+  z-index: 10;
+}
+
+.story-right .story__info::after {
+  left: -1.2rem;
+  border-left: 0;
+  border-right: 1.2rem solid var(--color-white);
+}
+
+/**
+ * -----------------------------------
+ *  OUR TEAM
+ * -----------------------------------
+*/
+#ourTeam h2 {
+  margin-bottom: 2.4rem;
+}
+
+.ourTeam__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+}
+
+.ourTeam__member {
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
+  border-bottom: 0.8rem solid var(--color-secondary);
+  border-radius: 0.8rem;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.ourTeam__member:hover {
+  border-top: 0.8rem solid var(--color-secondary);
+  border-bottom: none;
+}
+
+.member__description {
+  padding: 2rem;
+}
+
+.member__description * {
+  color: var(--color-primary--variant);
+}
+
+.member__description small {
+  margin: 1.2rem 0;
+}
+
+.member__description .social__link {
+  border: 0.1rem solid var(--color-primary);
+}
+
+.member__description .social__link:hover {
+  border: 0.1rem solid var(--color-secondary);
+}
+
+/**
+ * -----------------------------------
+ *  MEDIA QUERIES
+ * -----------------------------------
+*/
+@media screen and (max-width: 600px) {
+  .whoWeAre__content {
+    flex-direction: column;
+  }
+
+  .whoWeAre__image,
+  .my-custom-swiper {
+    width: 100%;
+  }
+
+  .plansLife__content {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .plansLife__content video,
+  .company__figures {
+    width: 100%;
+  }
+
+  .company__figures {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .company__stat {
+    width: 50%;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .story {
+    width: 100%;
+    padding-left: 5rem;
+    padding-right: 0rem;
+  }
+
+  .story-left,
+  .story-right {
+    left: 0;
+  }
+
+  .vertical-line {
+    left: 2rem;
+  }
+
+  .story i {
+    left: -0.8rem;
+    right: -0.8rem;
+  }
+
+  .story__info::after {
+    left: -1.6rem;
+  }
+
+  .story-left .story__info::after {
+    border-left: 0;
+    border-right: 1.2rem solid var(--color-white);
+    left: -1.2rem;
+  }
+
+  .ourTeam__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}

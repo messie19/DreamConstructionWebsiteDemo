@@ -1,0 +1,96 @@
+/**
+ * -----------------------------------
+ *  COMPLETED PROJECTS
+ * -----------------------------------
+*/
+#completedProjects h2 {
+  margin-bottom: 3.2rem;
+}
+
+.completedProjects__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.completedProject {
+  border-radius: 0.8rem;
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.completedProject__image {
+  width: 40%;
+  position: relative;
+}
+
+.project__type {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  font-weight: var(--font-weight-2);
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 2.4rem;
+  opacity: 0.75;
+}
+
+.completedProject__description {
+  width: 60%;
+}
+
+.completedProject__description {
+  padding: 2rem;
+}
+
+.completedProject__description--title {
+  margin-bottom: 1.6rem;
+}
+
+.completedProject__description--detail {
+  margin-bottom: 3.2rem;
+}
+
+.completedProject__description--icons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.completedProject__description--icons span {
+  background: var(--color-secondary);
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.completedProject__description--icons i {
+  color: var(--color-white);
+  font-size: var(--font-size-4);
+}
+
+/**
+ * -----------------------------------
+ *  MEDIA QUERIES
+ * -----------------------------------
+*/
+@media screen and (max-width: 600px) {
+  .completedProject {
+    flex-direction: column;
+  }
+
+  .completedProject:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
+  .completedProject__image,
+  .completedProject__description {
+    width: 100%;
+  }
+}

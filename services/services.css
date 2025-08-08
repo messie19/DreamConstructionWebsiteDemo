@@ -1,0 +1,79 @@
+/**
+ * -----------------------------------
+ *  PAGE HEADER
+ * -----------------------------------
+*/
+.page__header {
+  background: url(../assets/construction-2.jpeg) center center / cover;
+}
+
+/**
+ * -----------------------------------
+ *  SERVICES
+ * -----------------------------------
+*/
+#services h2 {
+  margin-bottom: 4rem;
+}
+
+.service__category {
+  margin-bottom: 4rem;
+}
+
+.services__content {
+  display: flex;
+  gap: 4rem;
+}
+
+.service {
+  border-radius: 0.8rem;
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3);
+}
+
+.service__image {
+  position: relative;
+}
+
+.service__icon {
+  background: var(--color-secondary);
+  border: 0.4rem solid var(--color-white);
+  border-radius: 50%;
+  font-size: var(--font-size-1);
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  color: var(--color-white);
+  bottom: -3rem;
+  left: 8rem;
+  display: grid;
+  place-items: center;
+}
+
+.service__description {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem 2rem;
+}
+
+.service__description--detail {
+  margin: 1.6rem 0 3.2rem;
+}
+
+/**
+ * -----------------------------------
+ *  MEDIA QUERIES
+ * -----------------------------------
+*/
+@media screen and (max-width: 600px) {
+  .services__content {
+    flex-direction: column;
+  }
+
+  .service {
+    width: 100%;
+  }
+}

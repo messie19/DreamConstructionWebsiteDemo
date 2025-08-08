@@ -1,0 +1,344 @@
+/**
+ * -----------------------------------
+ *  HEADER
+ * -----------------------------------
+*/
+header {
+  height: calc(100vh - 8rem);
+}
+
+.header__container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  /* gap: 8rem; */
+  margin: 8rem auto 0;
+  /* padding-top: 8rem; */
+}
+
+.header__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__description * {
+  color: var(--color-white);
+}
+
+.header__description--detail {
+  margin: 2.4rem 0 3.2rem;
+}
+
+.header__image {
+  border-radius: 0.8rem;
+  overflow: hidden;
+  padding-left: 4rem;
+}
+
+/* ------------- Our Valued Clients logo  ------------- */
+.valued__clients {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.valued__clients::before,
+.valued__clients::after {
+  content: "";
+  width: 2.4rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.valued__clients::before {
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255)
+  );
+  left: 0;
+}
+
+.valued__clients::after {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgb(255, 255, 255)
+  );
+  right: 0;
+}
+
+.clients__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: white;
+}
+
+@keyframes slides {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.clients__logo--image {
+  width: 8rem;
+  height: 8rem;
+  animation: slides 10s infinite linear;
+}
+
+.valued__clients:hover .clients__logo--image {
+  animation-play-state: paused;
+}
+
+/* ------------- scroll down - mouse ------------- */
+.scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll__icon {
+  border: 0.2rem solid var(--color-white);
+  border-radius: 0.8rem;
+  height: 3rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll__icon::after {
+  background: var(--color-secondary-variant);
+  border-radius: 0.2rem;
+  content: "";
+  height: 0.6rem;
+  width: 0.4rem;
+  animation: scroll 1s infinite alternate-reverse;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0.3rem);
+  }
+
+  100% {
+    transform: translateY(-0.3rem);
+  }
+}
+
+/* ------------- Whatsapp ------------- */
+.whatsapp {
+  background: green;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 4%;
+  bottom: 2rem;
+  color: var(--color-white);
+  display: grid;
+  place-items: center;
+  z-index: 3;
+}
+
+.whatsapp i {
+  font-size: var(--font-size-1);
+}
+
+/**
+ * -----------------------------------
+ *   WHO WE ARE CURVE
+ * -----------------------------------
+*/
+.whoWeAre-curve::before,
+.whoWeAre-curve::after {
+  background: url(../assets/wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  height: 12vw;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.whoWeAre-curve::before {
+  top: 0.1rem;
+  transform: translateY(-100%);
+}
+
+.whoWeAre-curve::after {
+  bottom: 0.1rem;
+  transform: translateY(100%) rotate(180deg);
+}
+
+/**
+ * -----------------------------------
+ *   WHY CHOOSE US
+ * -----------------------------------
+*/
+#whyChooseUs h2 {
+  margin-bottom: 2.4rem;
+}
+
+.whyChooseUs__content {
+  display: flex;
+  gap: 2rem;
+}
+
+.whyChooseUs__content video,
+.whyChooseUs__description {
+  border-radius: 0.8rem;
+  width: 50%;
+  overflow: hidden;
+}
+
+.whyChooseUs__description {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border-radius: 0.8rem;
+  padding: 1.2rem;
+}
+
+.choice {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.whyChooseUs__description hr {
+  border: 0.1rem solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1.2rem;
+}
+
+.choice__icon {
+  font-size: var(--font-size-1);
+}
+
+.choice__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.choice__description h3 {
+  margin-bottom: 0.8rem;
+}
+
+.choice:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+
+/**
+ * -----------------------------------
+ *  TESTIMONIALS
+ * -----------------------------------
+*/
+#testimonials h2 {
+  margin-bottom: 2.4rem;
+}
+
+.testimonials__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  padding: 4rem;
+  position: relative;
+}
+
+.testimonials__content {
+  /* display: flex; */
+  /* gap: 8rem; */
+  padding: 4rem 0;
+}
+
+.testimony {
+  border-radius: 0.8rem;
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 50%;
+}
+
+.testimony__description--title {
+  margin-bottom: 1.6rem;
+}
+
+.testimony__description--detail {
+  margin-bottom: 3.2rem;
+}
+
+.testimony__client {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.testimony__client--img {
+  aspect-ratio: 1/1;
+  border: 0.2rem solid var(--color-secondary);
+  border-radius: 50%;
+  width: 10rem;
+}
+
+.testimony__client--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/**
+ * -----------------------------------
+ *  CONNECT
+ * -----------------------------------
+*/
+#connect {
+  background: var(--color-secondary);
+}
+
+.connect__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+/**
+ * -----------------------------------
+ *  MEDIA QUERIES
+ * -----------------------------------
+*/
+@media screen and (max-width: 600px) {
+  /* ------------- HEADER ------------- */
+  .header__container {
+    grid-template-columns: 100%;
+    gap: 8rem;
+  }
+
+  .header__image {
+    padding-left: 0;
+  }
+
+  /* ------------- WHY CHOOSE US ------------- */
+  .whyChooseUs__content {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .whyChooseUs__content video,
+  .whyChooseUs__description {
+    width: 100%;
+  }
+
+  /* ------------- TESTIMONIALS ------------- */
+  .testimony {
+    width: 100%;
+  }
+}
